@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<title>
+    
+    COMP1511 20T3 - 
+Week 06
+Laboratory
+Exercises
+
+    
+</title><link href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/" rel="canonical"/>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet"/>
+<link href="/~cs1511/20T3/flask.cgi/static/course.css?213751602407825.0" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/~cs1511/20T3/flask.cgi/static/course.js?92151599736636.0"></script>
+<link href="/~cs1511/20T3/flask.cgi/static/favicon.ico?1271605745352.0" rel="icon" type="image/png"/>
+<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+<!-- MathJax. -->
+<script async="yes" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body class="d-flex flex-column" style="min-height: 100vh;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+<div class="container">
+<button aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navmenu" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/">
+      COMP1511 20T3
+    </a>
+<div class="collapse navbar-collapse" id="navmenu">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active"><a class="nav-link" href="https://discourse.cse.unsw.edu.au/20t3/comp1511/">Forum</a></li>
+<li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/student/">Submissions</a></li>
+<li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/assignments/ass1/index.html">Assignment 1</a></li>
+<li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/assignments/ass2/index.html">Assignment 2</a></li>
+<li class="navbar-text px-2">|</li>
+<li class="nav-item active dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="week-selector" role="button">
+    Week 06 <span class="caret"></span>
+</a>
+<div aria-labelledby="week-selector" class="dropdown-menu">
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/01/questions">Week 01</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/02/questions">Week 02</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/03/questions">Week 03</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/04/questions">Week 04</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/05/questions">Week 05</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/06/questions">Week 06</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/07/questions">Week 07</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/08/questions">Week 08</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/09/questions">Week 09</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/10/questions">Week 10</a>
+</div>
+</li>
+<li class="nav-item active dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="tlb-selector" role="button">
+    Laboratory <span class="caret"></span>
+</a>
+<div aria-labelledby="tlb-selector" class="dropdown-menu">
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/tut/06/questions">Tutorial</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/06/questions">Laboratory</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/test/06/questions">Weekly Test</a>
+</div>
+</li>
+<li class="nav-item active dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="qa-selector" role="button">
+    Exercises <span class="caret"></span>
+</a>
+<div aria-labelledby="qa-selector" class="dropdown-menu">
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/06/questions">Exercises</a>
+<a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/lab/06/answers">Sample Solutions</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main aria-label="Content" class="container" style="flex: 1; padding-top: 4rem;">
+<header>
+<h1 class="text-center">
+Week 06
+Laboratory
+Exercises
+</h1>
+</header>
+<div class="tutlab lab">
+<section class="exercise">
+<header><h3>Objectives</h3></header>
+<ul>
+<li>unused Lab from flex week</li>
+</ul>
+</section>
+<section class="exercise">
+<header><h3>Preparation</h3></header>
+<p>
+Before the lab you should re-read the relevant lecture slides and their accompanying examples.
+
+
+
+    </p></section>
+<h3>Introduction</h3>
+<p>
+WWII code-breaking at <a href="https://en.wikipedia.org/wiki/Bletchley_Park">Bletchley Park</a>,
+spearheaded by Alan Turing (amongst many others),
+was the genesis of modern computing.  In this lab you too will perform computer-assisted code-breaking
+but don't worry, the ciphers you must break are simpler than the German Lorenz and Enigma ciphers.
+</p><p>
+The two ciphers we'll be looking at in the lab are the Caesar cipher and the Substitution cipher.
+</p><p>
+The <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Cipher</a> is a way of encrypting
+text by "rotating" the letters through the alphabet so that each letter in a message is an exact
+number of letters away from its original.
+</p><p>
+The <a href="https://en.wikipedia.org/wiki/Substitution_cipher">Substitution Cipher</a> is a way
+of encrypting text by replacing each letter with a specific other letter in the alphabet.
+</p><p>
+The exercises in the labs require you to read characters.
+Use the library function <b>getchar</b> to do this.
+</p><p>
+<b>getchar</b> reads the next character from standard input and returns it.
+If <b>getchar</b> is unable to read a character it returns the special value <code>EOF</code>.
+</p><p>
+When input is coming from a file, <b>getchar</b> will return <code>EOF</code>
+after the last character in the file is read.
+</p><p>
+When input is coming from a (Linux/OSX) terminal, you can indicate no more characters
+can be read by typing <kbd>Ctrl+D</kbd>.
+This will cause  <b>getchar</b> to return <code>EOF</code>
+</p><p>
+In some of this week's lab exercises you will find it convenient to put the test input
+in a file, rather than type it every time you want to test the program.
+</p><p>
+You can use a &lt; character to indicate to the shell that you want to run a program
+taking its input from a file.
+</p><p>
+So for example you might create the file <code>input.txt</code> with gedit and
+then run <code>a.out</code> takes its input from the file rather the terminal:
+
+</p><pre is="tty">
+<kbd is="sh">gedit input.txt &amp;</kbd>
+<kbd is="sh">./a.out &lt;input.txt</kbd>
+</pre>
+<section class="exercise">
+<header><h3>Submission</h3></header>
+    
+
+
+When you are finished each exercises make sure you submit your work by running <code>give</code>.
+<p>
+You can run <code>give</code> multiple times.
+Only your last submission will be marked.
+</p><p>
+Don't submit any exercises you haven't attempted.
+</p><p>
+If you are working at home, you may find it more convenient
+to upload your work via
+<a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php">give's web interface</a>.
+</p><p>
+Remember you have until
+
+<b>Wednesday 01 December 00:00</b>
+
+to submit your work.
+</p><p>
+You cannot obtain marks by e-mailing your code to tutors or lecturers.
+</p><p>
+You check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/student/">here</a>.
+</p><p>
+Automarking will be run by the lecturer several days after the submission deadline,
+using test cases different to those <code>autotest</code> runs for you.
+(Hint: do your own testing as well as running <code>autotest</code>.)
+</p><p>
+After automarking is run by the lecturer
+you can <a href="https://cgi.cse.unsw.edu.au/~cs1511/20T3/student/">view your results here</a>.
+The resulting mark will also be available
+<a href="https://cgi.cse.unsw.edu.au/~give/Student/sturec.php">via give's web interface</a>.
+
+</p><h4>Lab Marks</h4>
+<p>
+When all components of a lab  are automarked you should be able to view the
+the marks <a href="https://cgi.cse.unsw.edu.au/~give/Student/sturec.php">via give's web interface</a>
+or by running this command on a CSE machine:
+
+</p><pre is="tty">
+<kbd is="sh">1511 classrun -sturec</kbd>
+</pre>
+</section>
+</div>
+</main>
+<footer class="mt-3 pt-3 bg-dark text-center no-print">
+<p class="text-muted">
+<strong>COMP1511 20T3: Programming Fundamentals</strong>
+is brought to you by <br/>
+the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br/>
+at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br/>
+For all enquiries, please email the class account at
+<a href="mailto:@cse.unsw.edu.au">cs1511@cse.unsw.edu.au</a><br/>
+<small>CRICOS Provider 00098G</small>
+</p>
+</footer>
+</body>
+</html>
